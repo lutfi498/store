@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Lutfi Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+    <div class="admin-container">
+        <!-- Login Form -->
+        <div id="login-form" class="form-container">
+            <h2>Admin Login</h2>
+            <form id="login-form-element">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" class="error-message"></p>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="admin-dashboard" class="dashboard" style="display: none;">
+            <header class="dashboard-header">
+                <h1>Admin Panel - Lutfi Store</h1>
+                <button id="logout-btn">Logout</button>
+            </header>
+            
+            <div class="dashboard-content">
+                <!-- Manajemen Produk -->
+                <section class="management-section">
+                    <h2>Manajemen Produk</h2>
+                    <form id="product-form">
+                        <input type="hidden" id="product-id">
+                        <div class="form-group">
+                            <label for="product-name">Nama Produk:</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-category">Kategori:</label>
+                            <input type="text" id="product-category" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Harga:</label>
+                            <input type="number" id="product-price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-stock">Stok:</label>
+                            <input type="number" id="product-stock" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">URL Gambar:</label>
+                            <input type="text" id="product-image" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-description">Deskripsi:</label>
+                            <textarea id="product-description" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-variants">Variasi (warna/ukuran), pisahkan dengan koma:</label>
+                            <input type="text" id="product-variants" placeholder="Merah, Biru, XL, L">
+                        </div>
+                        <button type="submit" class="btn-save">Simpan Produk</button>
+                    </form>
+                    <h3>Daftar Produk</h3>
+                    <table id="product-table">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Kategori</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Produk akan dimuat di sini -->
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Pengaturan Toko -->
+                <section class="management-section">
+                    <h2>Pengaturan Toko</h2>
+                    <form id="settings-form">
+                        <div class="form-group">
+                            <label for="whatsapp-number">Nomor WhatsApp (tanpa +62):</label>
+                            <input type="text" id="whatsapp-number" placeholder="81234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="promo-banner-text">Teks Banner Promo:</label>
+                            <input type="text" id="promo-banner-text">
+                        </div>
+                        <div class="form-group">
+                            <label for="wa-order-template">Template Pesan Order:</label>
+                            <textarea id="wa-order-template" rows="5"></textarea>
+                        </div>
+                        <button type="submit">Simpan Pengaturan</button>
+                    </form>
+                </section>
+
+                <!-- Manajemen Testimoni -->
+                <section class="management-section">
+                    <h2>Manajemen Testimoni</h2>
+                    <form id="testimonial-form">
+                        <div class="form-group">
+                            <label for="testimonial-name">Nama Pelanggan:</label>
+                            <input type="text" id="testimonial-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="testimonial-message">Pesan Testimoni:</label>
+                            <textarea id="testimonial-message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit">Tambah Testimoni</button>
+                    </form>
+                    <h3>Daftar Testimoni</h3>
+                    <div id="testimonial-list">
+                        <!-- Testimoni akan dimuat di sini -->
+                    </div>
+                </section>
+
+                <!-- Data Backup/Restore -->
+                <section class="management-section">
+                    <h2>Backup & Restore Data</h2>
+                    <p>Simpan data ini secara berkala untuk mencegah kehilangan. Salin teks di bawah dan simpan di file teks.</p>
+                    <button id="backup-data">Backup Data</button>
+                    <textarea id="backup-textarea" style="width: 100%; height: 150px; margin-top: 10px;"></textarea>
+                    <p>Untuk restore, tempel data backup ke kotak di atas dan klik tombol di bawah.</p>
+                    <button id="restore-data">Restore Data</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>

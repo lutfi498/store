@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutfi Store</title>
+    <meta name="description" content="Toko online terpercaya dengan berbagai produk pilihan. Belanja mudah, aman, dan nyaman via WhatsApp.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Tempelkan Kode Meta Pixel Anda di sini -->
+    <!-- <script>!function(f,b,e,v,n,t,s)... </script> -->
+    <!-- Tempelkan Kode Google Analytics Anda di sini -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Lutfi Store</a>
+            <nav>
+                <ul>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button id="theme-toggle">🌙</button>
+                <a href="admin.html" class="admin-btn">Admin</a>
+                <button id="cart-icon">🛒 (<span id="cart-count">0</span>)</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner Promo -->
+        <section id="promo-banner" class="banner">
+            <p>Selamat Datang di Lutfi Store! Dapatkan diskon spesial untuk pembelian pertama.</p>
+        </section>
+
+        <!-- Search dan Filter -->
+        <section class="search-filter">
+            <div class="container">
+                <input type="text" id="search-input" placeholder="Cari produk...">
+                <select id="category-filter">
+                    <option value="">Semua Kategori</option>
+                </select>
+                <select id="sort-filter">
+                    <option value="default">Urutkan</option>
+                    <option value="name-asc">Nama (A-Z)</option>
+                    <option value="price-asc">Harga (Rendah ke Tinggi)</option>
+                    <option value="price-desc">Harga (Tinggi ke Rendah)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Daftar Produk -->
+        <section id="products" class="container product-list">
+            <h2>Produk Kami</h2>
+            <div id="product-grid">
+                <!-- Produk akan dimuat di sini oleh JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Keranjang Belanja (Sidebar) -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Keranjang Belanja</h2>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items">
+            <!-- Item keranjang akan dimuat di sini -->
+        </div>
+        <div class="cart-footer">
+            <h3>Total: <span id="cart-total">Rp 0</span></h3>
+            <button id="checkout-whatsapp">Checkout via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Tombol WhatsApp Mengambang -->
+    <a href="https://wa.me/6288985628174" target="_blank" class="whatsapp-float" title="Hubungi kami via WhatsApp">
+        <i class="whatsapp-icon">💬</i>
+    </a>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 Lutfi Store. Hak Cipta Dilindungi.</p>
+            <p>Hubungi kami: <a href="https://wa.me/6288985628174" target="_blank">6288985628174</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
